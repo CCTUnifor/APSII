@@ -1,21 +1,22 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using APSII.ConsoleApp.GUIs;
 
 namespace APSII.ConsoleApp
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            var produtoGUI = new ProdutoGUI();
+            produtoGUI.Inserir("Prod 1", "Descricao 1", "cat");
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            var lancamentoGUI = new LancamentoGUI();
+            var prod = produtoGUI.BuscarProduto(1);
+            var lancamento = lancamentoGUI.AdicionarLancamentoEntrada(prod, 10, DateTime.Now.AddMonths(1));
+
+
+            
+            Console.ReadKey();
         }
     }
 }

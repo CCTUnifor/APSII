@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A5682410-1012-4F1B-8458-FBED0988DFF4}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>APSII.ConsoleApp</RootNamespace>
-    <AssemblyName>APSII.ConsoleApp</AssemblyName>
+    <ProjectGuid>{F4C6206B-BABB-4634-BEA3-7C16428405EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APSII.DAO</RootNamespace>
+    <AssemblyName>APSII.DAO</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +24,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,21 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUIs\LancamentoGUI.cs" />
-    <Compile Include="GUIs\ProdutoGUI.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="LancamentoDAO.cs" />
+    <Compile Include="ProdutoDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\APSII.DAO\APSII.DAO.csproj">
-      <Project>{f4c6206b-babb-4634-bea3-7c16428405ee}</Project>
-      <Name>APSII.DAO</Name>
-    </ProjectReference>
     <ProjectReference Include="..\APSII.Model\APSII.Model.csproj">
-      <Project>{08b23ad8-adda-43e3-b9ad-94c5346e9ba1}</Project>
+      <Project>{08B23AD8-ADDA-43E3-B9AD-94C5346E9BA1}</Project>
       <Name>APSII.Model</Name>
     </ProjectReference>
   </ItemGroup>
