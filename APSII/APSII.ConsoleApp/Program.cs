@@ -13,8 +13,6 @@ namespace APSII.ConsoleApp
             var lancamentoGUI = new LancamentoGUI();
             var prod = produtoGUI.BuscarProduto(1);
             var lancamento = lancamentoGUI.AdicionarLancamentoEntrada(prod, 10, DateTime.Now.AddMonths(1));
-
-
             
             Console.ReadKey();
         }

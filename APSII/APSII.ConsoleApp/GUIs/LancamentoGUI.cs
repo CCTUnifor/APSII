@@ -6,16 +6,10 @@ namespace APSII.ConsoleApp.GUIs
 {
     public class LancamentoGUI
     {
-        public LancamentoDAO LancamentoDao { get; set; }
-        public ProdutoDAO ProdutoDao { get; set; }
+        public LancamentoDAO LancamentoDao { get; private set; }
 
-        public LancamentoGUI()
-        {
-            LancamentoDao = new LancamentoDAO();
-            ProdutoDao = new ProdutoDAO();
-        }
-
-        
+        public LancamentoGUI() 
+            => LancamentoDao = new LancamentoDAO();
 
         public Lancamento AdicionarLancamentoEntrada(Produto produto, int quantidade, DateTime dataVencimento)
         {
