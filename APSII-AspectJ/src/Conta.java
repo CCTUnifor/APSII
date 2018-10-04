@@ -6,10 +6,8 @@ public class Conta {
 		this.numero = numero;
 	}
 
-	public void creditar (double valor){
-		System.out.println("Vai creditar "); 
+	public void creditar (double valor){ 
 		saldo += valor;
-		System.out.println("Creditou");
 	}
 
 	public void debitar (double valor){
