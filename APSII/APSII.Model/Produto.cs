@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using APSII.Model.Aspects;
 
 namespace APSII.Model
 {
@@ -7,7 +8,11 @@ namespace APSII.Model
     {
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public string Categoria { get; set; }
+        private string _categoria { get; set; }
+        public string Categoria {
+            get { return _categoria; }
+            [NotifyAspect]
+            set { _categoria = value; } }
 
         public virtual ICollection<Lancamento> Lancamentos { get; set; }
 
