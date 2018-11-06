@@ -9,7 +9,7 @@ namespace APSII.ConsoleApp
         static void Main(string[] _args)
         {
             //Register observers
-            Subject.Update += (args, p) => Console.WriteLine($"Notificado por: {args.Method.DeclaringType.FullName}.{args.Method.Name}({string.Join(", ", args.Arguments)})!");
+            Subject.UpdateEvent += (args, p) => Console.WriteLine($"Notificado por: {args.Method.DeclaringType.FullName}.{args.Method.Name}({string.Join(", ", args.Arguments)})!");
 
             var produtoGUI = new ProdutoGUI();
             produtoGUI.Inserir("Prod 1", "Descricao 1", "cat");

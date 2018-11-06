@@ -6,7 +6,7 @@ namespace APSII.Model
 {
     public class Subject
     {
-        public static event Action<MethodExecutionArgs, object> Update;
-        public static void Notify(MethodExecutionArgs args, object obj) => Update?.Invoke(args, obj);
+        public static event Action<MethodExecutionArgs, object> UpdateEvent;
+        public static void Notify(MethodExecutionArgs args, object obj) => UpdateEvent?.Invoke(args, obj);
     }
 }
